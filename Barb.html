@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Barbing App</title>
+
+    <link rel="stylesheet" href="barb.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>💈 BARBING APP</h1>
+        <p>Professional Haircuts • Easy Booking</p>
+    </header>
+
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h2>Welcome to Our Barbing Salon</h2>
+
+            <p>
+                Book your appointment quickly and easily.
+                Choose your preferred service, date and time.
+            </p>
+        </section>
+
+
+        <!-- Appointment Section -->
+        <section class="appointment">
+
+            <h2>📅 Book an Appointment</h2>
+
+            <form id="appointmentForm">
+
+                <!-- Customer Name -->
+                <div class="form-group">
+                    <label for="customerName">
+                        Customer Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        name="customerName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+                </div>
+
+
+                <!-- Service -->
+                <div class="form-group">
+                    <label for="service">
+                        Choose Service
+                    </label>
+
+                    <select
+                        id="service"
+                        name="service"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select a service --
+                        </option>
+
+                        <option value="Regular Haircut">
+                            Regular Haircut
+                        </option>
+
+                        <option value="Skin Fade">
+                            Skin Fade
+                        </option>
+
+                        <option value="Beard Trim">
+                            Beard Trim
+                        </option>
+
+                        <option value="Hair Styling">
+                            Hair Styling
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- Date -->
+                <div class="form-group">
+                    <label for="date">
+                        Appointment Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                    >
+                </div>
+
+
+                <!-- Time -->
+                <div class="form-group">
+                    <label for="time">
+                        Appointment Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        required
+                    >
+                </div>
+
+
+                <!-- Additional Note -->
+                <div class="form-group">
+                    <label for="note">
+                        Additional Note
+                    </label>
+
+                    <textarea
+                        id="note"
+                        name="note"
+                        placeholder="Any special request? (Optional)"
+                        rows="4"
+                    ></textarea>
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit">
+                    ✅ Book Appointment
+                </button>
+
+            </form>
+
+
+            <!-- Confirmation Message -->
+            <div id="message"></div>
+
+        </section>
+
+
+        <!-- Services Section -->
+        <section class="services">
+
+            <h2>✂️ Our Services</h2>
+
+
+            <div class="service-card">
+                <h3>💈 Regular Haircut</h3>
+
+                <p>
+                    A clean and professional haircut.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <h3>🔥 Skin Fade</h3>
+
+                <p>
+                    A sharp and stylish skin fade.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <h3>🧔 Beard Trim</h3>
+
+                <p>
+                    Keep your beard neat and well shaped.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <h3>💇 Hair Styling</h3>
+
+                <p>
+                    Professional styling for your hair.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Barbing App
+        </p>
+
+        <p>
+            Professional • Clean • Reliable
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+  </html>
