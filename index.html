@@ -4,228 +4,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Barbing App</title>
+    <title>Cephas Barbing App</title>
 
-    <link rel="stylesheet" href="barb.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="Barb.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header class="header">
-        <h1>💈 BARBING APP</h1>
+        <h1>💈 CEPHAS BARBING APP</h1>
         <p>Professional Haircuts • Easy Booking</p>
     </header>
 
-
     <main>
 
-        <!-- Welcome Section -->
+        <!-- WELCOME -->
         <section class="welcome">
-            <h2>Welcome to Our Barbing Salon</h2>
+            <h2>Welcome 👋</h2>
 
             <p>
-                Book your appointment quickly and easily.
-                Choose your preferred service, date and time.
+                Book your haircut quickly and easily with our professional barbers.
             </p>
+
+            <button
+                type="button"
+                onclick="document.getElementById('booking').scrollIntoView()">
+                Book an Appointment
+            </button>
         </section>
 
 
-        <!-- Appointment Section -->
-        <section class="appointment">
+        <!-- BARBERS -->
+        <section>
+            <h2>Our Barbers</h2>
+
+            <div class="barber-list">
+
+                <div class="barber-card">
+                    <h3>Barber Cephas</h3>
+                    <p>Classic & Modern Haircuts</p>
+                    <p>⭐ 5.0</p>
+                </div>
+
+                <div class="barber-card">
+                    <h3>Barber Daniel</h3>
+                    <p>Fades & Styling</p>
+                    <p>⭐ 4.8</p>
+                </div>
+
+                <div class="barber-card">
+                    <h3>Barber David</h3>
+                    <p>Kids & Adult Haircuts</p>
+                    <p>⭐ 4.9</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BOOKING -->
+        <section id="booking">
 
             <h2>📅 Book an Appointment</h2>
 
-            <form id="appointmentForm">
+            <form id="bookingForm">
 
-                <!-- Customer Name -->
-                <div class="form-group">
-                    <label for="customerName">
-                        Customer Name
-                    </label>
+                <!-- NAME -->
+                <label for="name">Full Name</label>
 
-                    <input
-                        type="text"
-                        id="customerName"
-                        name="customerName"
-                        placeholder="Enter your full name"
-                        required
-                    >
-                </div>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
 
 
-                <!-- Phone Number -->
-                <div class="form-group">
-                    <label for="phone">
-                        Phone Number
-                    </label>
+                <!-- PHONE -->
+                <label for="phone">Phone Number</label>
 
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number"
-                        required
-                    >
-                </div>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="08012345678"
+                    required
+                >
 
 
-                <!-- Service -->
-                <div class="form-group">
-                    <label for="service">
-                        Choose Service
-                    </label>
+                <!-- BARBER -->
+                <label for="barber">Choose Barber</label>
 
-                    <select
-                        id="service"
-                        name="service"
-                        required
-                    >
+                <select id="barber" required>
 
-                        <option value="">
-                            -- Select a service --
-                        </option>
+                    <option value="">
+                        -- Select Barber --
+                    </option>
 
-                        <option value="Regular Haircut">
-                            Regular Haircut
-                        </option>
+                    <option value="Barber Cephas">
+                        Barber Cephas
+                    </option>
 
-                        <option value="Skin Fade">
-                            Skin Fade
-                        </option>
+                    <option value="Barber Daniel">
+                        Barber Daniel
+                    </option>
 
-                        <option value="Beard Trim">
-                            Beard Trim
-                        </option>
+                    <option value="Barber David">
+                        Barber David
+                    </option>
 
-                        <option value="Hair Styling">
-                            Hair Styling
-                        </option>
-
-                    </select>
-                </div>
+                </select>
 
 
-                <!-- Date -->
-                <div class="form-group">
-                    <label for="date">
-                        Appointment Date
-                    </label>
+                <!-- SERVICE -->
+                <label for="service">Choose Service</label>
 
-                    <input
-                        type="date"
-                        id="date"
-                        name="date"
-                        required
-                    >
-                </div>
+                <select id="service" required>
 
+                    <option value="">
+                        -- Select Service --
+                    </option>
 
-                <!-- Time -->
-                <div class="form-group">
-                    <label for="time">
-                        Appointment Time
-                    </label>
+                    <option value="Low Cut">
+                        Low Cut
+                    </option>
 
-                    <input
-                        type="time"
-                        id="time"
-                        name="time"
-                        required
-                    >
-                </div>
+                    <option value="Skin Fade">
+                        Skin Fade
+                    </option>
 
+                    <option value="Waves">
+                        Waves
+                    </option>
 
-                <!-- Additional Note -->
-                <div class="form-group">
-                    <label for="note">
-                        Additional Note
-                    </label>
+                    <option value="Kids Haircut">
+                        Kids Haircut
+                    </option>
 
-                    <textarea
-                        id="note"
-                        name="note"
-                        placeholder="Any special request? (Optional)"
-                        rows="4"
-                    ></textarea>
-                </div>
+                    <option value="Beard Trim">
+                        Beard Trim
+                    </option>
+
+                </select>
 
 
-                <!-- Submit -->
+                <!-- DATE -->
+                <label for="date">Choose Date</label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+
+                <!-- TIME -->
+                <label for="time">Choose Time</label>
+
+                <input
+                    type="time"
+                    id="time"
+                    required
+                >
+
+
+                <!-- REQUEST -->
+                <label for="message">
+                    Additional Request
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Any special request?"
+                ></textarea>
+
+
+                <!-- SUBMIT -->
                 <button type="submit">
-                    ✅ Book Appointment
+                    Book Appointment
                 </button>
 
             </form>
 
 
-            <!-- Confirmation Message -->
-            <div id="message"></div>
+            <!-- BOOKING RESULT -->
+
+            <div id="bookingResult"></div>
 
         </section>
 
 
-        <!-- Services Section -->
-        <section class="services">
+        <!-- LOCATION -->
 
-            <h2>✂️ Our Services</h2>
+        <section>
 
+            <h2>📍 Our Location</h2>
 
-            <div class="service-card">
-                <h3>💈 Regular Haircut</h3>
+            <p>
+                Adekunle Ajasin University (AAUA), Akungba-Akoko, Nigeria.
+            </p>
 
-                <p>
-                    A clean and professional haircut.
+            <div id="map">
+
+                <p style="text-align:center; padding:100px 10px;">
+                    📍 Salon location
                 </p>
+
             </div>
 
-
-            <div class="service-card">
-                <h3>🔥 Skin Fade</h3>
-
-                <p>
-                    A sharp and stylish skin fade.
-                </p>
-            </div>
+        </section>
 
 
-            <div class="service-card">
-                <h3>🧔 Beard Trim</h3>
+        <!-- CONTACT -->
 
-                <p>
-                    Keep your beard neat and well shaped.
-                </p>
-            </div>
+        <section>
 
+            <h2>📞 Contact Us</h2>
 
-            <div class="service-card">
-                <h3>💇 Hair Styling</h3>
+            <p>
+                Need help with your appointment?
+            </p>
 
-                <p>
-                    Professional styling for your hair.
-                </p>
-            </div>
+            <p>
+                <strong>Phone:</strong>
+                +234 800 000 0000
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                barbingapp@example.com
+            </p>
 
         </section>
 
     </main>
 
 
-    <!-- Footer -->
+    <!-- FOOTER -->
+
     <footer>
 
         <p>
-            © 2026 Barbing App
+            © 2026 Cephas Barbing App
         </p>
 
         <p>
-            Professional • Clean • Reliable
+            Professional Haircuts • Easy Booking
         </p>
 
     </footer>
 
 
-    <!-- JavaScript -->
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
-  </html>
+</html>
